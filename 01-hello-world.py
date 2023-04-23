@@ -23,11 +23,11 @@ remote instance. You can run any other commands you want on your instance, just
 prefix them with "rx":
 
     $ rx pwd
-    $ rx ls -lh /
+    $ rx 'ls -lh > ls-out'
     $ rx which python
 
-Feel free to continue to experiment with this script or check out 02-io.py for
-the next exercise.
+Feel free to continue to experiment with this script or check out 02-output.py
+for the next exercise.
 """
 import socket
 
