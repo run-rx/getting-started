@@ -2,8 +2,8 @@
 
 You may want access to artifacts that your program produces: binaries, images,
 models, etc. As long as they are created under the rx root directory (the
-directory containing .rx), then they will be automatically synced back to your
-client.
+directory where you ran "rx init"), then they will be automatically synced back
+to your client.
 
 For example, try redirecting output to a file under rx-out:
 
@@ -17,7 +17,7 @@ will grab the redirect before it can be sent to the remote machine!
 If you run `ls` on the rx-out directory (locally or via rx), you can see it now
 contains the output of your command.
 
-rx-out is a special output directory where we encourage you to write files.
+rx-out is a special output directory that we encourage you to write files to.
 However, rx will also make a best-effort attempt to "sweep" any other outputs
 that were created into rx-out.
 

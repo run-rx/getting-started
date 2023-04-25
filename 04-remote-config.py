@@ -1,7 +1,7 @@
 """Customizing your remote configuration.
 
 rx gives you a lot of flexibility in terms of RAM, disk, CPU, and GPU options
-on your remote machine.
+on your remote machine. (Or, at least, it will!)
 
 You can check out your current configuration by looking at .rx/remotes/default.
 When you run `rx init`, rx uses that to provision a bog-standard Python 3.11
