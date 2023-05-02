@@ -5,7 +5,7 @@ These are tutorial files demonstrating how to use
 
 1. Install [rx](https://github.com/run-rx/rx), following the instructions in
    README.md.
-2. Clone this repo: `git clone git@github.com:run-rx/getting-started.git`
+2. Clone this repo: `git clone https://github.com/run-rx/getting-started.git`
 3. Initialize rx in this directory: `cd getting-started; rx init`.
 
 Each tutorial file (`NN-<description>.py`) has documentation at the top about
