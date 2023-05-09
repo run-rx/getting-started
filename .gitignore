@@ -1,3 +1,4 @@
 .rx
 .rxignore
+.venv
 rx-out
