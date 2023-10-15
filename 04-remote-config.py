@@ -11,8 +11,8 @@ However, the files in .rx/remotes are simply starter templates and you can
 create any configuration you want.
 
 For example, this file uses removeprefix, which is a method added in Python
-3.9. Try running this with Python 3.7 by creating a file `my-rx-configs/py37`
-with the following content:
+3.9. Try running this with Python 3.7 by creating a file
+`my-rx-configs/py37.json` with the following content:
 
   {
     "image": {
@@ -23,7 +23,7 @@ with the following content:
 Now tell rx that you want to use a different remote machine configuration by
 running `rx init` again, this time with the --remote flag:
 
-  $ rx init --remote=my-rx-configs/py37
+  $ rx init --remote=my-rx-configs/py37.json
 
 Now if you run this script, you should see:
 
