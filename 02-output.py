@@ -7,30 +7,23 @@ to your client.
 
 For example, try redirecting output to a file under rx-out:
 
-  $ rx 'date > rx-out/my-date'
-  Created outputs:
-    rx-out/my-date
+  $ rx 'date > my-date'
+  Changed:
+    my-date
 
 Note the quotes around the command: if you do not quote it, your local shell
 will grab the redirect before it can be sent to the remote machine!
 
-If you run `ls` on the rx-out directory (locally or via rx), you can see it now
-contains the output of your command.
-
-rx-out is a special output directory that we encourage you to write files to.
-However, rx will also make a best-effort attempt to "sweep" any other outputs
-that were created into rx-out.
-
-For example, try running this script on rx:
+Try running this script on rx:
 
   $ rx python 02-output.py
   Wrote timestamps/now.txt
-  Created outputs:
-    rx-out/timestamps/now.txt
+  Changed:
+    timestamps/now.txt
 
-Note that rx-out is a good place for intermediate outputs, as the rest of
-the remote directory is reset to exactly mirror your local machine before each
-command.
+Note that the remote directory is reset to exactly mirror your local machine
+before each command (and your local directory will be synced to mirror the
+remote at the end of each command).
 """
 import datetime
 import pathlib

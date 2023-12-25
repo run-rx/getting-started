@@ -1,7 +1,7 @@
 """Customizing your remote configuration.
 
 rx gives you a lot of flexibility in terms of RAM, disk, CPU, and GPU options
-on your remote machine. (Or, at least, it will!)
+on your remote machine.
 
 You can check out your current configuration by looking at .rx/remotes/default.
 When you run `rx init`, rx uses that to provision a bog-standard Python 3.11
@@ -12,18 +12,15 @@ create any configuration you want.
 
 For example, this file uses removeprefix, which is a method added in Python
 3.9. Try running this with Python 3.7 by creating a file
-`my-rx-configs/py37.json` with the following content:
+`my-rx-configs/py37.yaml` with the following content:
 
-  {
-    "image": {
-      "docker": "python:3.7-slim"
-    }
-  }
+  image:
+    repository: "python:3.7-slim"
 
 Now tell rx that you want to use a different remote machine configuration by
 running `rx init` again, this time with the --remote flag:
 
-  $ rx init --remote=my-rx-configs/py37.json
+  $ rx init --remote=my-rx-configs/py37.yaml
 
 Now if you run this script, you should see:
 
@@ -42,9 +39,6 @@ go back to using the config `default` is symlinked to. Now it prints:
   Torch
   Pi
   Mongo
-
-In the future these remote config files will be used to specify hardware
-requirements, too.
 """
 
 PY_PROJECTS = ['PyTorch', 'PyPi', 'PyMongo']
